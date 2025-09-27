@@ -1,6 +1,5 @@
 package W4_L4_LinkedListUsingJCF;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Main {
@@ -31,9 +30,8 @@ public class Main {
 
         System.out.println();
 
-        Iterator<String> iterator = arrayList.iterator();
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next() + " -> ");
+        for (String s : linkedList.reversed()) {
+            System.out.print(s + " -> ");
         }
     }
 }
