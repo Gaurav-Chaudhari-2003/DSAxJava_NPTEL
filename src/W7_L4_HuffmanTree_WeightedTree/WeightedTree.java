@@ -1,3 +1,4 @@
+/*
 package W7_L4_HuffmanTree_WeightedTree;
 
 import java.util.*;
@@ -28,8 +29,8 @@ public class WeightedTree<T extends Comparable<T>> {
         for(int i = 0; i < treeSize-1; i++) {
             int num1 = (Integer) treeArray.removeFirst();
             int num2 = (Integer) treeArray.removeFirst();
-            treeArray.addFirst((T) Integer.valueOf(num1+num2));
-            huffmanTree.addLast((T) Integer.valueOf(num2+num1));
+            treeArray.add((T) Integer.valueOf(num1+num2));
+            huffmanTree.addLast((T) Integer.valueOf(num1+num2));
             quickSort(0, treeArray.size() - 1);
         }
 
@@ -62,5 +63,52 @@ public class WeightedTree<T extends Comparable<T>> {
             quickSort(low, pi - 1);
             quickSort(pi + 1, high);
         }
+    }
+}
+*/
+
+package W7_L4_HuffmanTree_WeightedTree;
+
+import java.util.*;
+
+public class WeightedTree<T extends Comparable<T>> {
+    private final List<T> originalTree = new ArrayList<>();
+    private final List<T> huffmanTree = new ArrayList<>();
+
+    public List<T> getOriginalTree() {
+        return originalTree;
+    }
+
+    public List<T> getHuffmanTree() {
+        return huffmanTree;
+    }
+
+    public WeightedTree(T[] tree) {
+        Collections.addAll(originalTree, tree);
+        Collections.addAll(huffmanTree, tree);
+        buildHuffmanTree();
+    }
+
+    private void buildHuffmanTree() {
+        if (originalTree.isEmpty()) return;
+
+        // PriorityQueue automatically keeps smallest elements first
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (T value : originalTree) {
+            pq.add((Integer) value);
+        }
+
+        while (pq.size() > 1) {
+            int num1 = pq.poll(); // smallest
+            int num2 = pq.poll(); // next smallest
+            int sum = num1 + num2;
+
+            // Add sum back to the queue
+            pq.add(sum);
+
+            // Record the merge in huffmanTree
+            huffmanTree.add((T) Integer.valueOf(sum));
+        }
+        Collections.reverse(huffmanTree);
     }
 }
