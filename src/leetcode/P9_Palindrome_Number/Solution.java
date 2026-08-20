@@ -12,6 +12,8 @@ class Solution {
         return x == halfRev || x == halfRev/10;
     }
 
+    System.out.println("Welcome to Solution");
+
     public static void main(String[] args) {
         Solution s = new Solution();
         System.out.println(s.isPalindrome(1));
@@ -20,3 +22,5 @@ class Solution {
         System.out.println(s.isPalindrome(-123));
     }
 }
+
+
