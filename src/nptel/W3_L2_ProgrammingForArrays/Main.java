@@ -26,13 +26,13 @@ class ArraysDemo {
         for (int i : newArr) System.out.print(i + " ");
         System.out.println();
 
-        // 3️⃣ Deletion (delete element at index 3)
-        int[] delArr = new int[newArr.length - 1];
+        // 3️⃣ Deletion (delete element at index
         for (int i = 0, j = 0; i < newArr.length; i++) {
             if (i == 3) continue;
             delArr[j++] = newArr[i];
         }
-        System.out.println("After Deletion:");
+        System.out.println("Hello Neha");
+        
         for (int i : delArr) System.out.print(i + " ");
         System.out.println();
 
