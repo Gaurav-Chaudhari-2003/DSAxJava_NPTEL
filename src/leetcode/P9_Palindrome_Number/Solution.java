@@ -20,3 +20,4 @@ class Solution {
         System.out.println(s.isPalindrome(-123));
     }
 }
+
