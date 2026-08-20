@@ -9,6 +9,12 @@ public class index {
         System.out.print("Enter Student ID: ");
         int id = sc.nextInt();
         System.out.println("Student: " + name + ", ID: " + id);
+
+
+
+
+
+        
     }
 }
 
