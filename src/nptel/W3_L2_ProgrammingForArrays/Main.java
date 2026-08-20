@@ -32,6 +32,9 @@ class ArraysDemo {
             delArr[j++] = newArr[i];
         }
         System.out.println("Hello Neha");
+
+        System.out.println("welcome to Main.java");
+        
         
         for (int i : delArr) System.out.print(i + " ");
         System.out.println();
