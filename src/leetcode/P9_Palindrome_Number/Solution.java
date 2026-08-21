@@ -22,5 +22,9 @@ class Solution {
         System.out.println(s.isPalindrome(-123));
     }
 }
+<<<<<<< HEAD
 
 
+=======
+// gargi
+>>>>>>> a3c4af3a22313834821717e44b4bf89ed3843bd3
