@@ -7,7 +7,7 @@ class Solution {
         int halfRev = 0;
         while(x > halfRev) {
             halfRev = halfRev * 10 + x % 10;
-            x /= 10;
+
         }
         return x == halfRev || x == halfRev/10;
     }
